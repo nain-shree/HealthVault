@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Record System</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero, .features {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>HealthVault</h2>
+        <button onclick="openLogin()">Login</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your Medical Records, Simplified!</h1>
+        <p>Store, manage and share your health data securely anytime, anywhere.</p>
+        <button onclick="openLogin()">Get Started</button>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="card">
+            <h3>Upload Records</h3>
+            <p>Easily upload prescriptions and reports.</p>
+        </div>
+
+        <div class="card">
+            <h3>Track History</h3>
+            <p>View your complete medical timeline.</p>
+        </div>
+
+        <div class="card">
+            <h3>Secure Sharing</h3>
+            <p>Share records with doctors instantly.</p>
+        </div>
+    </section>
+
+    <!-- Login Popup -->
+    <div id="loginPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+
+        <div style="background:white; color:black; padding:20px; border-radius:10px; width:300px; text-align:center;">
+
+            <h2>Login</h2>
+
+            <input type="email" id="email" placeholder="Enter Email" style="width:90%; padding:10px; margin:10px 0;"><br>
+
+            <input type="password" id="password" placeholder="Enter Password" style="width:90%; padding:10px; margin:10px 0;"><br>
+
+            <button onclick="login()">Login</button>
+            <button onclick="closeLogin()">Close</button>
+
+        </div>
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+</html>

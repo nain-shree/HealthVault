@@ -24,6 +24,23 @@
 
     <button onclick="shareRecords()">Share</button>
 
+    <!-- ✅ OTP Display -->
+    <p id="otpDisplay" style="margin-top:15px; font-weight:bold;"></p>
+
+    <hr style="margin:20px 0;">
+
+    <!-- ✅ Doctor Section -->
+    <h3>Doctor Access</h3>
+
+    <input type="text" id="doctorOtp" placeholder="Enter OTP"
+    style="padding:10px; width:200px;">
+
+    <br><br>
+
+    <button onclick="verifyOtp()">Verify OTP</button>
+
+    <p id="accessResult" style="margin-top:15px; font-weight:bold;"></p>
+
     <br><br>
 
     <button onclick="goToDashboard()">Back to Dashboard</button>
@@ -31,5 +48,6 @@
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
